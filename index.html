@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Registration Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow"><i data-lucide="user-plus" class="icon-sm"></i> HR Intake Form</p>
+        <h1>Employee Registration <span class="text-gradient">Hub</span></h1>
+        <p class="hero-copy">
+          Seamlessly onboard new talent. This form captures essential employee data, employment preferences, and documentation.
+        </p>
+      </div>
+    </section>
+
+    <section class="form-card">
+      <div class="form-header">
+        <div class="header-icon">
+          <i data-lucide="clipboard-list"></i>
+        </div>
+        <div class="header-text">
+          <h2>Registration Details</h2>
+          <p>Please complete the following sections accurately.</p>
+        </div>
+      </div>
+
+      <form id="employeeForm" class="registration-form">
+        <input type="hidden" id="recordSource" name="recordSource" value="zencoder-modern-template">
+
+        <div class="section-block">
+          <h3><i data-lucide="user"></i> Personal Information</h3>
+          <div class="field-grid">
+            <label class="field">
+              <span>Full Name</span>
+              <div class="input-wrapper">
+                <i data-lucide="user"></i>
+                <input type="text" name="fullName" placeholder="Jane Doe" required>
+              </div>
+            </label>
+
+            <label class="field">
+              <span>Employee ID</span>
+              <div class="input-wrapper">
+                <i data-lucide="hash"></i>
+                <input type="text" name="employeeId" placeholder="EMP-001" required>
+              </div>
+            </label>
+
+            <label class="field">
+              <span>Email Address</span>
+              <div class="input-wrapper">
+                <i data-lucide="mail"></i>
+                <input type="email" name="email" placeholder="jane@company.com" required>
+              </div>
+            </label>
+
+            <label class="field">
+              <span>Create Password</span>
+              <div class="input-wrapper">
+                <i data-lucide="lock"></i>
+                <input type="password" name="password" placeholder="••••••••" required>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <h3><i data-lucide="briefcase"></i> Employment Details</h3>
+          <div class="field-grid">
+            <label class="field">
+              <span>Department</span>
+              <div class="input-wrapper">
+                <i data-lucide="building-2"></i>
+                <select name="department" required>
+                  <option value="">Select a department</option>
+                  <option>Human Resources</option>
+                  <option>Engineering</option>
+                  <option>Design</option>
+                  <option>Product Management</option>
+                  <option>Marketing</option>
+                  <option>Operations</option>
+                </select>
+              </div>
+            </label>
+
+            <label class="field">
+              <span>Preferred Work Location</span>
+              <div class="input-wrapper">
+                <i data-lucide="map-pin"></i>
+                <select name="location" size="4" multiple>
+                  <option>Head Office</option>
+                  <option>Regional Hub</option>
+                  <option>Fully Remote</option>
+                  <option>Hybrid (Office/Remote)</option>
+                  <option>Field Assignment</option>
+                </select>
+              </div>
+              <small>Hold Ctrl (Windows) or Command (Mac) to multi-select.</small>
+            </label>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <h3><i data-lucide="calendar"></i> Employment Type</h3>
+          <div class="choice-group">
+            <label class="choice">
+              <input type="radio" name="employmentType" value="Full-Time" required>
+              <span>Full-Time</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="employmentType" value="Part-Time">
+              <span>Part-Time</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="employmentType" value="Contract">
+              <span>Contract</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="employmentType" value="Freelance">
+              <span>Freelance</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <h3><i data-lucide="check-square"></i> Requirements Checklist</h3>
+          <div class="checkbox-grid">
+            <label class="choice">
+              <input type="checkbox" name="documents" value="Resume">
+              <span>Resume</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="documents" value="Government ID">
+              <span>Government ID</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="documents" value="Tax Forms">
+              <span>Tax Forms</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="documents" value="Signed NDA">
+              <span>Signed NDA</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <h3><i data-lucide="info"></i> Additional Information</h3>
+          <div class="field-grid">
+            <label class="field">
+              <span>Supporting Documents</span>
+              <div class="file-upload">
+                <i data-lucide="upload-cloud"></i>
+                <input type="file" id="supportingFile" name="supportingFile">
+                <span id="fileStatus">Click to upload file</span>
+              </div>
+            </label>
+
+            <label class="field">
+              <span>Bio / Notes</span>
+              <div class="input-wrapper align-top">
+                <i data-lucide="pencil"></i>
+                <textarea name="notes" rows="4" placeholder="Briefly describe your experience or add any special requests."></textarea>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button type="button" id="previewButton" class="ghost-button">
+            <i data-lucide="eye"></i> Preview
+          </button>
+          <button type="submit" class="submit-button">
+            Submit Application <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+        
+        <div id="previewContainer" class="preview-container" hidden>
+          <div class="preview-header">
+            <h3><i data-lucide="file-text"></i> Application Summary</h3>
+            <button type="button" class="close-preview" id="closePreview">×</button>
+          </div>
+          <div id="previewContent" class="preview-content"></div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
