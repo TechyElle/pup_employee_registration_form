@@ -76,15 +76,6 @@ Contributions are what make the open source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-Index: index.html
-===================================================================
---- index.html	Before
-+++ index.html	After
-@@ -196,10 +196,10 @@
-       </form>
-     </section>
-   </main>
----
 <div align="center">
     ⚠️ *For educational purposes only. Do not submit real personal or sensitive data.*
 </div>
